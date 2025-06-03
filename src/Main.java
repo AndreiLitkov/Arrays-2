@@ -16,7 +16,7 @@ public class Main {
         spends[4] = 3100;
         System.out.println(Arrays.toString(spends));
 
-        for (int i =0; i < spends.length; i++) {
+        for (int i = 0; i < spends.length; i++) {
             sum += spends[i];
         }
         System.out.println("Сумма трат за месяц составила " + sum);
@@ -28,16 +28,16 @@ public class Main {
         Arrays.sort(spends);
         System.out.println(Arrays.toString(spends));
         System.out.println("Минимальная сумма трат за месяц составила " + spends[0] + " рублей.");
-        System.out.println("Максимальная сумма трат за месяц составила " + spends[spends.length -1] + " рублей.");
+        System.out.println("Максимальная сумма трат за месяц составила " + spends[spends.length - 1] + " рублей.");
 
         System.out.println("Task 2 с помощью циклов");
         int maxSpend = 0;
         int minSpend = 500_000;
         for (int i = 0; i < spends.length; i++) {
-            if (spends[i]>maxSpend){
-                maxSpend=spends[i];
+            if (spends[i] > maxSpend) {
+                maxSpend = spends[i];
             }
-            if (spends[i] < minSpend){
+            if (spends[i] < minSpend) {
                 minSpend = spends[i];
             }
         }
@@ -49,7 +49,7 @@ public class Main {
         //Task 3
         System.out.println("Task 3");
 
-        double [] spends1 = {1700,2500,1650,3700,2770};
+        double[] spends1 = {1700, 2500, 1650, 3700, 2770};
         double sum1 = 0;
         double averageCosts = 0;
         for (int i = 0; i < spends1.length; i++) {
@@ -64,8 +64,20 @@ public class Main {
         //Task 4
         System.out.println("Task 4");
 
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length -1 ; i>=0 ; i--){
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
+        System.out.println();
+
+        char temp;
+        int q = reverseFullName.length;
+        for (int i=0 ; i< q / 2 ; i++){
+            temp = reverseFullName[q - i -1];
+            reverseFullName[q -i -1] = reverseFullName[i];
+            reverseFullName[i] = temp;
+        }
+        for (int i =0; i<reverseFullName.length; i++){
             System.out.print(reverseFullName[i]);
         }
     }
